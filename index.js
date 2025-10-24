@@ -1,6 +1,8 @@
 import dateFormat from './src/dateFormat.js';
+import deepClone from './src/deepClone.js';
 
 const bean = {
-    dateFormat
+    dateFormat,
+    deepClone
 }
 export default bean
