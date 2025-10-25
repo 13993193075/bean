@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/13993193075/bean/issues"
   },
-  "homepage": "https://github.com/13993193075/bean#readme"
+  "homepage": "https://github.com/13993193075/bean#readme",
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "nodemailer": "^7.0.10",
+    "xlsx": "^0.18.5"
+  }
 }
