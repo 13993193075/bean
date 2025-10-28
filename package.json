@@ -1,6 +1,6 @@
 {
   "name": "@yoooloo42/bean",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/13993193075/bean/issues"
   },
-  "homepage": "https://github.com/13993193075/bean#readme"
+  "homepage": "https://github.com/13993193075/bean#readme",
+  "exports": {
+    ".": "./src/index.js",
+    "./utils/*": "./src/utils/*.js"
+  },
+  "files": [
+    "src"
+  ]
 }
