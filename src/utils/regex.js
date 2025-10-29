@@ -117,3 +117,4 @@ const bean = {
     email,
     password
 }
+export default bean
