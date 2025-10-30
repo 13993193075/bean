@@ -115,7 +115,7 @@ function password(str) {
 /**
  * 验证一个字符串是否符合常见的验证码规则。
  * 规则：长度在 4 到 8 位之间，内容只包含数字和大小写字母。
- * * @param {string} codeStr - 需要验证的字符串。
+ * * @param {string} str - 需要验证的字符串。
  * @returns {boolean} - 如果符合规则返回 true，否则返回 false。
  */
 function vercode(str) {
@@ -135,10 +135,35 @@ function vercode(str) {
     return Regex.test(str);
 }
 
+/**
+ * 验证一个字符串是否符合固定的 6 位验证码规则。
+ * 规则：长度必须是 6 位，内容只包含数字和大小写字母。
+ * @param {string} str - 需要验证的字符串。
+ * @param {number} length - 验证码必须具备的固定长度
+ * @returns {boolean} - 如果符合规则返回 true，否则返回 false。
+ */
+function vercode6(str, length=6) {
+    // 1. 检查输入是否为字符串（可选，但推荐）
+    if (typeof str !== 'string') {
+        return false;
+    }
+
+    // 2. 正则表达式解释：
+    // ^ 表示字符串的开始
+    // [0-9a-zA-Z] 表示字符必须是数字（0-9）或大小写字母（a-z, A-Z）
+    // {6} 表示字符的长度必须恰好是 6 位
+    // $ 表示字符串的结束
+    const Regex = new RegExp('^[0-9a-zA-Z]{' + length + '}$');
+
+    // 3. 执行匹配
+    return Regex.test(str);
+}
+
 const bean = {
     cellphone,
     email,
     password,
-    vercode
+    vercode,
+    vercode6
 }
 export default bean
