@@ -1,4 +1,36 @@
 /**
+ * 在指定的字符集内生成一个指定长度的随机字符串。
+ *
+ * @param {number} length - 随机字符串的所需长度。
+ * @param {string} characters - 用于生成字符串的字符集（如 '0123456789abcdef'）。
+ * @returns {string} - 生成的随机字符串。
+ * @throws {Error} - 如果长度不是正数或字符集为空。
+ */
+function random(length, characters) {
+    // 1. 输入校验
+    if (typeof length !== 'number' || length <= 0) {
+        throw new Error("长度参数必须是一个大于零的数字。");
+    }
+    if (typeof characters !== 'string' || characters.length === 0) {
+        throw new Error("字符集参数必须是一个非空字符串。");
+    }
+
+    const charactersLength = characters.length;
+    let result = '';
+
+    // 2. 循环 'length' 次，每次随机选择一个字符
+    for (let i = 0; i < length; i++) {
+        // 随机选择字符的索引
+        const randomIndex = Math.floor(Math.random() * charactersLength);
+
+        // 将随机选中的字符添加到结果字符串中
+        result += characters.charAt(randomIndex);
+    }
+
+    return result;
+}
+
+/**
  * 随机生成一个符合常见验证码规则（4-8位，数字+大小写字母）的字符串。
  * @returns {string} - 随机生成的验证码字符串。
  */
@@ -50,6 +82,7 @@ function vercode6(length = 6) {
 }
 
 const bean = {
+    random,
     vercode,
     vercode6
 }
