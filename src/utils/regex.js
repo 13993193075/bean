@@ -112,9 +112,33 @@ function password(str) {
     return isCombinationValid;
 }
 
+/**
+ * 验证一个字符串是否符合常见的验证码规则。
+ * 规则：长度在 4 到 8 位之间，内容只包含数字和大小写字母。
+ * * @param {string} codeStr - 需要验证的字符串。
+ * @returns {boolean} - 如果符合规则返回 true，否则返回 false。
+ */
+function vercode(str) {
+    // 1. 检查输入是否为字符串
+    if (typeof str !== 'string') {
+        return false;
+    }
+
+    // 2. 正则表达式解释：
+    // ^ 表示字符串的开始
+    // [0-9a-zA-Z] 表示字符必须是数字（0-9）或大小写字母（a-z, A-Z）
+    // {4,8} 表示字符的长度必须在 4 到 8 位之间（包含 4 和 8）
+    // $ 表示字符串的结束
+    const Regex = /^[0-9a-zA-Z]{4,8}$/;
+
+    // 3. 执行匹配
+    return Regex.test(str);
+}
+
 const bean = {
     cellphone,
     email,
-    password
+    password,
+    vercode
 }
 export default bean
