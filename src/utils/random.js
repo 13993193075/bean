@@ -81,9 +81,32 @@ function vercode6(length = 6) {
     return result;
 }
 
+/**
+ * 随机生成一个固定 6 位长度、只包含数字的验证码字符串。
+ * @returns {string} - 随机生成的 6 位验证码字符串。
+ */
+function vercode6N(length = 6) {
+    // 定义所有允许的字符集 (数字 0-9, 小写字母 a-z, 大写字母 A-Z)
+    const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const charactersLength = characters.length;
+
+    let result = '';
+    // 循环 6 次，每次随机从 characters 中选择一个字符
+    for (let i = 0; i < length; i++) {
+        // 随机选择字符的索引
+        const randomIndex = Math.floor(Math.random() * charactersLength);
+
+        // 将随机选中的字符添加到结果字符串中
+        result += characters.charAt(randomIndex);
+    }
+
+    return result;
+}
+
 const bean = {
     random,
     vercode,
-    vercode6
+    vercode6,
+    vercode6N
 }
 export default bean
