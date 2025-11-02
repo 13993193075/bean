@@ -87,7 +87,7 @@ function vercode6(length = 6) {
  */
 function vercode6N(length = 6) {
     // 定义所有允许的字符集 (数字 0-9, 小写字母 a-z, 大写字母 A-Z)
-    const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const characters = '0123456789';
     const charactersLength = characters.length;
 
     let result = '';
