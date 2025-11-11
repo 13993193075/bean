@@ -1,5 +1,5 @@
 // 引用标准：GB/T 3304
-export default [
+const gbt3304 = [
     {"code": "01", "text": "汉族"},
     {"code": "02", "text": "蒙古族"},
     {"code": "03", "text": "回族"},
@@ -57,3 +57,6 @@ export default [
     {"code": "55", "text": "珞巴族"},
     {"code": "56", "text": "基诺族"},
 ]
+
+export {gbt3304}
+export default {gbt3304}

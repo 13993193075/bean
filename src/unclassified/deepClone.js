@@ -345,7 +345,7 @@ function arrayToTree(flatArray, inputFields, outputFields) {
     return tree;
 }
 
-const bean = {
+export {
     deepClone,
     deepCloneAndMap,
     typeOfValue,
@@ -353,4 +353,11 @@ const bean = {
     flattenTreeValues,
     arrayToTree
 }
-export default bean
+export default {
+    deepClone,
+    deepCloneAndMap,
+    typeOfValue,
+    isJsonString,
+    flattenTreeValues,
+    arrayToTree
+}

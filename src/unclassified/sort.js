@@ -229,10 +229,15 @@ function uniqueObjectArrayByFields(arr, fields) {
     return uniqueArray;
 }
 
-const bean = {
+export {
     sortSimpleArray,
     sortObjectArrayMultiLevel,
     uniqueSimpleArray,
     uniqueObjectArrayByFields
 }
-export default bean
+export default {
+    sortSimpleArray,
+    sortObjectArrayMultiLevel,
+    uniqueSimpleArray,
+    uniqueObjectArrayByFields
+}

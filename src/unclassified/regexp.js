@@ -159,11 +159,17 @@ function vercode6(str, length=6) {
     return Regex.test(str);
 }
 
-const bean = {
+export {
     cellphone,
     email,
     password,
     vercode,
     vercode6
 }
-export default bean
+export default {
+    cellphone,
+    email,
+    password,
+    vercode,
+    vercode6
+}

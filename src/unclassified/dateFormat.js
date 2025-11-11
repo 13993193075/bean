@@ -76,8 +76,11 @@ function days(dateFrom, dateTo) {
     return dayDifference;
 }
 
-const bean = {
+export {
     dateFormat,
     days
 }
-export default bean
+export default {
+    dateFormat,
+    days
+}

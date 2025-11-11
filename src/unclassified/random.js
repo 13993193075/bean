@@ -103,10 +103,15 @@ function vercode6N(length = 6) {
     return result;
 }
 
-const bean = {
+export {
     random,
     vercode,
     vercode6,
     vercode6N
 }
-export default bean
+export default {
+    random,
+    vercode,
+    vercode6,
+    vercode6N
+}
