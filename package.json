@@ -1,26 +1,43 @@
 {
-  "name": "@yoooloo42/bean",
-  "version": "1.0.16",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/13993193075/bean.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/13993193075/bean/issues"
-  },
-  "homepage": "https://github.com/13993193075/bean#readme",
-  "exports": {
-    "./gbt/*": "./src/gbt/*.js",
-    "./unclassified/*": "./src/unclassified/*.js"
-  },
-  "files": [
-    "src"
-  ]
+    "name": "@yoooloo42/bean",
+    "version": "1.0.21",
+    "description": "",
+    "type": "module",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build": "npm run clean && rollup -c",
+        "build:prod": "cross-env NODE_ENV=production npm run build",
+        "watch": "rollup -c -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/13993193075/bean.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/13993193075/bean/issues"
+    },
+    "homepage": "https://github.com/13993193075/bean#readme",
+    "exports": {
+        ".": {
+            "import": "./dist/index.esm.js",
+            "require": "./dist/index.cjs.js"
+        },
+        "./*": "./*",
+        "./dist/*": "./dist/*"
+    },
+    "files": [
+        "dist"
+    ],
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^29.0.0",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "@rollup/plugin-terser": "^0.4.4",
+        "cross-env": "^10.1.0",
+        "rollup": "^4.53.2"
+    }
 }
