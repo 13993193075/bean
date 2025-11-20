@@ -4586,13 +4586,57 @@ function arrayToTree(flatArray, inputFields, outputFields) {
 
     return tree;
 }
+
+/**
+ * 在树形对象中查找指定名称的叶子节点值
+ * @param {Object} tree - 被查找的对象（树形结构）
+ * @param {String} leafName - 要查找的属性名称
+ * @returns {any} - 查找到的叶节点内容，未找到返回 undefined
+ */
+function getLeafValue(tree, leafName) {
+    // 边界检查：如果 tree 不是对象或者是 null，无法查找
+    if (typeof tree !== 'object' || tree === null) {
+        return undefined;
+    }
+
+    // 遍历当前层级的键
+    for (const key in tree) {
+        const value = tree[key];
+
+        // 判断当前值是否为“结构节点”（即中间节点：非数组的非空对象）
+        // 这里假设数组是数据（叶子），普通对象是结构（中间节点）
+        const isStructuralNode = typeof value === 'object' && value !== null && !Array.isArray(value);
+
+        // 1. 如果 key 匹配
+        if (key === leafName) {
+            // 且它不是中间节点（即它是叶子节点），则直接返回
+            if (!isStructuralNode) {
+                return value;
+            }
+            // 如果 key 匹配但是它是中间节点（Object），根据要求“不包括中间节点”，
+            // 我们不返回它，而是继续在这个对象内部递归查找（进入下方的递归逻辑）
+        }
+
+        // 2. 如果当前值是对象（中间节点），则递归查找
+        if (isStructuralNode) {
+            const result = getLeafValue(value, leafName);
+            // 如果在深层找到了结果，直接返回（冒泡上来）
+            if (result !== undefined) {
+                return result;
+            }
+        }
+    }
+
+    return undefined; // 遍历完未找到
+}
 var deepClone = {
     deepClone: deepClone$1,
     deepCloneAndMap,
     typeOfValue,
     isJsonString,
     flattenTreeValues,
-    arrayToTree
+    arrayToTree,
+    getLeafValue
 };
 
 /**
