@@ -4633,6 +4633,45 @@ function getLeafValue(tree, leafName) {
 
     return undefined; // 遍历完未找到
 }
+
+/**
+ * 在树形对象中查找任意指定名称的节点（包含中间节点和叶子节点）
+ * @param {Object} tree - 被查找的对象
+ * @param {String} nodeName - 要查找的属性名称
+ * @returns {any} - 查找到的节点内容（可能是值，也可能是对象），未找到返回 undefined
+ */
+function getNodeValue(tree, nodeName) {
+    // 边界检查
+    if (typeof tree !== 'object' || tree === null) {
+        return undefined;
+    }
+
+    // 1. 优先检查当前层级是否存在该 key (广度优先视角的微调，可选)
+    // 如果你希望优先匹配当前层级，而不是先钻入第一个子对象里找，可以取消下面这行的注释：
+    // if (tree.hasOwnProperty(nodeName)) return tree[nodeName];
+
+    // 遍历当前对象
+    for (const key in tree) {
+        const value = tree[key];
+
+        // 1. 只要 Key 匹配，立刻返回 Value
+        // 无论 value 是字符串、数字、还是另一个对象，都视为找到了
+        if (key === nodeName) {
+            return value;
+        }
+
+        // 2. 如果不匹配，且 value 是对象（具备子结构），则递归查找
+        // 注意：这里通常建议排除数组，除非你确定数组里也包含带 key 的对象
+        if (typeof value === 'object' && value !== null) {
+            const result = getNodeValue(value, nodeName);
+            if (result !== undefined) {
+                return result;
+            }
+        }
+    }
+
+    return undefined;
+}
 var deepClone$1 = {
     deepClone,
     deepCloneAndMap,
@@ -4640,7 +4679,8 @@ var deepClone$1 = {
     isJsonString,
     flattenTreeValues,
     arrayToTree,
-    getLeafValue
+    getLeafValue,
+    getNodeValue
 };
 
 /**
