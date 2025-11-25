@@ -4316,7 +4316,7 @@ function deepCloneAndMap(obj, valueMapper, cache = new WeakMap()) {
     // 如果是基本类型值（包括 null），则认为是叶节点，应用 valueMapper
     if (obj === null || typeof obj !== 'object') {
         // 对基本类型值应用转换函数
-        return valueMapper(obj);
+        return valueMapper ? valueMapper(obj) : obj;
     }
     
     // 如果是函数，通常我们不克隆它，也不转换它的值，直接返回
@@ -4349,7 +4349,7 @@ function deepCloneAndMap(obj, valueMapper, cache = new WeakMap()) {
     
     // 检查是否是内置对象（Date/RegExp），如果是，对克隆后的实例应用转换
     if (clone) {
-        return valueMapper(clone);
+        return valueMapper ? valueMapper(clone) : clone;
     }
 
     // 4. 初始化克隆对象 (普通对象和数组)
