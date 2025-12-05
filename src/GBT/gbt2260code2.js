@@ -1,5 +1,5 @@
 // 引用标准：GB/T 2260
-const gbt2260code2 = [
+export default [
     {"code2": "110000", "text2": "北京市"},
     {"code2": "120000", "text2": "天津市"},
     {"code2": "130000", "text2": "河北省"},
@@ -35,6 +35,3 @@ const gbt2260code2 = [
     {"code2": "810000", "text2": "香港特别行政区"},
     {"code2": "820000", "text2": "澳门特别行政区"}
 ]
-
-export {gbt2260code2}
-export default {gbt2260code2}

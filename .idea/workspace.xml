@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="597c46fd-3797-4e72-9d40-971749a34dee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2260code2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2260code2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2260code4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2260code4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2260code6.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2260code6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2261.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2261.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2659.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2659.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GBT/gbt3304.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt3304.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,6 +219,8 @@
       <workItem from="1763776333312" duration="18000" />
       <workItem from="1764087974801" duration="2990000" />
       <workItem from="1764753867575" duration="1217000" />
+      <workItem from="1764940528071" duration="214000" />
+      <workItem from="1764940770171" duration="254000" />
     </task>
     <servers />
   </component>
@@ -247,17 +256,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/GBT/gbt3304.js</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/utils/index.js" />

@@ -1,5 +1,5 @@
 // 引用标准：GB/T 2659
-const gbt2659 = [
+export default [
     {"code": "AFG", "text": "阿富汗"},
     {"code": "AGO", "text": "安哥拉"},
     {"code": "ALB", "text": "阿尔巴尼亚"},
@@ -61,6 +61,3 @@ const gbt2659 = [
     {"code": "VNM", "text": "越南"},
     {"code": "ZAF", "text": "南非"}
 ]
-
-export {gbt2659}
-export default {gbt2659}

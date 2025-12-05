@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 // 引用标准：GB/T 2260
-const gbt2260code2 = [
+var gbt2260code2 = [
     {"code2": "110000", "text2": "北京市"},
     {"code2": "120000", "text2": "天津市"},
     {"code2": "130000", "text2": "河北省"},
@@ -39,10 +39,9 @@ const gbt2260code2 = [
     {"code2": "810000", "text2": "香港特别行政区"},
     {"code2": "820000", "text2": "澳门特别行政区"}
 ];
-var gbt2260code2$1 = {gbt2260code2};
 
 // 引用标准：GB/T 2260
-const gbt2260code4 = [
+var gbt2260code4 = [
     {"code2": "110000", "text2": "北京市", "code4": "110000", "text4": "北京市"},
     {"code2": "110000", "text2": "北京市", "code4": "110100", "text4": "市辖区"},
 
@@ -451,10 +450,9 @@ const gbt2260code4 = [
     {"code2": "810000", "text2": "香港特别行政区", "code4": "810000", "text4": "香港特别行政区"},
     {"code2": "820000", "text2": "澳门特别行政区", "code4": "820000", "text4": "澳门特别行政区"}
 ];
-var gbt2260code4$1 = {gbt2260code4};
 
 // 引用标准：GB/T 2260
-const gbt2260code6 = [
+var gbt2260code6 = [
     {"code2": "110000", "text2": "北京市", "code4": "110000", "text4": "北京市", "code6": "110000", "text6": "北京市"},
     {"code2": "110000", "text2": "北京市", "code4": "110100", "text4": "市辖区", "code6": "110100", "text6": "市辖区"},
     {"code2": "110000", "text2": "北京市", "code4": "110100", "text4": "市辖区", "code6": "110101", "text6": "东城区"},
@@ -4016,19 +4014,17 @@ const gbt2260code6 = [
     {"code2": "810000", "text2": "香港特别行政区", "code4": "810000", "text4": "香港特别行政区", "code6": "810000", "text6": "香港特别行政区"},
     {"code2": "820000", "text2": "澳门特别行政区", "code4": "820000", "text4": "澳门特别行政区", "code6": "820000", "text6": "澳门特别行政区"}
 ];
-var gbt2260code6$1 = {gbt2260code6};
 
 // 引用标准：GB/T 3304
-const gbt2261 = [
+var gbt2261 = [
     {"code": "0", "text": "未知的性别"},
     {"code": "1", "text": "男"},
     {"code": "2", "text": "女"},
     {"code": "9", "text": "未说明的性别"},
 ];
-var gbt2261$1 = {gbt2261};
 
 // 引用标准：GB/T 2659
-const gbt2659 = [
+var gbt2659 = [
     {"code": "AFG", "text": "阿富汗"},
     {"code": "AGO", "text": "安哥拉"},
     {"code": "ALB", "text": "阿尔巴尼亚"},
@@ -4090,10 +4086,9 @@ const gbt2659 = [
     {"code": "VNM", "text": "越南"},
     {"code": "ZAF", "text": "南非"}
 ];
-var gbt2659$1 = {gbt2659};
 
 // 引用标准：GB/T 3304
-const gbt3304 = [
+var gbt3304 = [
     {"code": "01", "text": "汉族"},
     {"code": "02", "text": "蒙古族"},
     {"code": "03", "text": "回族"},
@@ -4151,15 +4146,14 @@ const gbt3304 = [
     {"code": "55", "text": "珞巴族"},
     {"code": "56", "text": "基诺族"},
 ];
-var gbt3304$1 = {gbt3304};
 
 var GBT = {
-    gbt2260code2: gbt2260code2$1,
-    gbt2260code4: gbt2260code4$1,
-    gbt2260code6: gbt2260code6$1,
-    gbt2261: gbt2261$1,
-    gbt2659: gbt2659$1,
-    gbt3304: gbt3304$1
+    gbt2260code2,
+    gbt2260code4,
+    gbt2260code6,
+    gbt2261,
+    gbt2659,
+    gbt3304
 };
 
 /**
