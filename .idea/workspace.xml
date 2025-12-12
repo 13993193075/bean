@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c46fd-3797-4e72-9d40-971749a34dee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2260code2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2260code2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2260code4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2260code4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2260code6.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2260code6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2261.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2261.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GBT/gbt2659.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt2659.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GBT/gbt3304.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GBT/gbt3304.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +108,9 @@
     <option name="height" value="1056" />
   </component>
   <component name="ProjectId" id="35oVIET1CdR97m7Ocp7yUK0i9xe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -221,6 +217,9 @@
       <workItem from="1764753867575" duration="1217000" />
       <workItem from="1764940528071" duration="214000" />
       <workItem from="1764940770171" duration="254000" />
+      <workItem from="1765521279820" duration="628000" />
+      <workItem from="1765521929265" duration="15000" />
+      <workItem from="1765523258793" duration="4956000" />
     </task>
     <servers />
   </component>
