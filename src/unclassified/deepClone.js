@@ -498,27 +498,44 @@ function deepDefaults(target, source) {
     return target;
 }
 
+// 替换对象中的内容，不改变指针
+function replaceObject(target, source) {
+    // 清空 target 的所有自身属性（包括不可枚举和 Symbol）
+    Reflect.ownKeys(target).forEach(key => delete target[key]);
+
+    if(!!source){
+        // 将 source 的属性复制过去
+        Object.assign(target, source);
+    }
+
+    return target;
+}
+
 export {
     deepClone,
     deepCloneAndMap,
     typeOfValue,
+    isObject,
     isJsonString,
     flattenTreeValues,
     arrayToTree,
     getLeafValue,
     getNodeValue,
     deepMerge,
-    deepDefaults
+    deepDefaults,
+    replaceObject
 }
 export default {
     deepClone,
     deepCloneAndMap,
     typeOfValue,
+    isObject,
     isJsonString,
     flattenTreeValues,
     arrayToTree,
     getLeafValue,
     getNodeValue,
     deepMerge,
-    deepDefaults
+    deepDefaults,
+    replaceObject
 }
