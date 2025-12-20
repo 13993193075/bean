@@ -1,6 +1,6 @@
 {
     "name": "@yoooloo42/bean",
-    "version": "1.0.28",
+    "version": "1.0.29",
     "description": "",
     "type": "module",
     "main": "dist/index.cjs.js",

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c46fd-3797-4e72-9d40-971749a34dee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unclassified/deepClone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/unclassified/deepClone.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +223,8 @@
       <workItem from="1765521929265" duration="15000" />
       <workItem from="1765523258793" duration="4956000" />
       <workItem from="1765558686239" duration="44000" />
+      <workItem from="1766235005326" duration="1262000" />
+      <workItem from="1766240971052" duration="4982000" />
     </task>
     <servers />
   </component>
