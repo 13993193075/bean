@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="597c46fd-3797-4e72-9d40-971749a34dee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unclassified/deepClone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/unclassified/deepClone.js" afterDir="false" />
-    </list>
+    <list default="true" id="597c46fd-3797-4e72-9d40-971749a34dee" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,6 +223,7 @@
       <workItem from="1766240971052" duration="4982000" />
       <workItem from="1766273868638" duration="567000" />
       <workItem from="1766274456383" duration="258000" />
+      <workItem from="1766275687512" duration="23000" />
     </task>
     <servers />
   </component>
