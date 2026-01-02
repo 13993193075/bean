@@ -6,30 +6,28 @@
  * @returns {string} 格式化后的日期字符串
  */
 function dateFormat(date, format) {
-    if (!(date instanceof Date) || isNaN(date)) {
-        // 如果不是有效的Date对象，返回空字符串或抛出错误
-        return '';
-    }
+    // 有效的 Date 对象一致性
+    const Date0 = new Date(date);
 
     const o = {
-        'M+': date.getMonth() + 1, // 月份
-        'd+': date.getDate(), // 日
-        'h+': date.getHours() % 12 === 0 ? 12 : date.getHours() % 12, // 12小时制
-        'H+': date.getHours(), // 24小时制
-        'm+': date.getMinutes(), // 分
-        's+': date.getSeconds(), // 秒
-        'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
-        'S': date.getMilliseconds() // 毫秒
+        'M+': Date0.getMonth() + 1, // 月份
+        'd+': Date0.getDate(), // 日
+        'h+': Date0.getHours() % 12 === 0 ? 12 : Date0.getHours() % 12, // 12小时制
+        'H+': Date0.getHours(), // 24小时制
+        'm+': Date0.getMinutes(), // 分
+        's+': Date0.getSeconds(), // 秒
+        'q+': Math.floor((Date0.getMonth() + 3) / 3), // 季度
+        'S': Date0.getMilliseconds() // 毫秒
     };
 
     // 替换年份 'yyyy'
     if (/(y+)/.test(format)) {
-        format = format.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+        format = format.replace(RegExp.$1, (Date0.getFullYear() + "").substr(4 - RegExp.$1.length));
     }
 
     // 替换 'AM/PM'
     if (/(A|a)/.test(format)) {
-        const ampm = date.getHours() < 12 ? 'AM' : 'PM';
+        const ampm = Date0.getHours() < 12 ? 'AM' : 'PM';
         format = format.replace(RegExp.$1, RegExp.$1 === 'a' ? ampm.toLowerCase() : ampm);
     }
 
@@ -55,16 +53,13 @@ function dateFormat(date, format) {
  * 结果为正数表示 dateTo 在 dateFrom 之后；负数表示 dateFrom 在 dateTo 之后。
  */
 function days(dateFrom, dateTo) {
-    // 1. 验证输入是否为有效的 Date 对象
-    if (!(dateFrom instanceof Date) || isNaN(dateFrom) ||
-        !(dateTo instanceof Date) || isNaN(dateTo)) {
-        console.error("输入参数必须是有效的 Date 对象。");
-        return null;
-    }
+    // 1. 有效的 Date 对象一致性
+    const DateFrom0 = new Date(dateFrom);
+    const DateTo0 = new Date(dateTo);
 
     // 2. 计算两个日期的时间戳差值 (毫秒)
     // Date.getTime() 返回从 1970 年 1 月 1 日 00:00:00 UTC 至今的毫秒数
-    const timeDifference = dateTo.getTime() - dateFrom.getTime();
+    const timeDifference = DateTo0.getTime() - DateFrom0.getTime();
 
     // 3. 定义一天对应的毫秒数
     const msPerDay = 1000 * 60 * 60 * 24;
