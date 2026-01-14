@@ -4179,6 +4179,12 @@ var GBT = {
  * @returns {string} 格式化后的日期字符串
  */
 function dateFormat$1(date, format) {
+    let result = '';
+    if(!date){
+        return ''
+    }
+    const format0 = format || 'yyyy/MM/dd HH:mm:ss';
+
     // 有效的 Date 对象一致性
     const Date0 = new Date(date);
 
@@ -4194,27 +4200,27 @@ function dateFormat$1(date, format) {
     };
 
     // 替换年份 'yyyy'
-    if (/(y+)/.test(format)) {
-        format = format.replace(RegExp.$1, (Date0.getFullYear() + "").substr(4 - RegExp.$1.length));
+    if (/(y+)/.test(format0)) {
+        result = format0.replace(RegExp.$1, (Date0.getFullYear() + "").substr(4 - RegExp.$1.length));
     }
 
     // 替换 'AM/PM'
-    if (/(A|a)/.test(format)) {
+    if (/(A|a)/.test(format0)) {
         const ampm = Date0.getHours() < 12 ? 'AM' : 'PM';
-        format = format.replace(RegExp.$1, RegExp.$1 === 'a' ? ampm.toLowerCase() : ampm);
+        result = format0.replace(RegExp.$1, RegExp.$1 === 'a' ? ampm.toLowerCase() : ampm);
     }
 
     // 替换其他时间单位 'MM', 'dd', 'HH' 等
     for (let k in o) {
-        if (new RegExp("(" + k + ")").test(format)) {
+        if (new RegExp("(" + k + ")").test(format0)) {
             const value = o[k];
             // $1 匹配到的字符串，例如 'MM'
             // 如果是毫秒 'S'，则不补零
-            format = format.replace(RegExp.$1, (RegExp.$1.length === 1) ? (value) : (("00" + value).substr(("" + value).length)));
+            result = format0.replace(RegExp.$1, (RegExp.$1.length === 1) ? (value) : (("00" + value).substr(("" + value).length)));
         }
     }
 
-    return format;
+    return result;
 }
 
 /**
