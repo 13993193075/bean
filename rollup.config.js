@@ -28,12 +28,14 @@ export default {
             file: 'dist/index.cjs.js',
             format: 'cjs',
             sourcemap: true,
+            exports: 'named',
         },
         {
             // ES Module 格式 (通常用于现代浏览器和打包工具，对应 package.json 的 "module")
             file: 'dist/index.esm.js',
             format: 'esm',
             sourcemap: true,
+            exports: 'named',
         }
     ],
 };
