@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c46fd-3797-4e72-9d40-971749a34dee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ly0d4/busicode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ly0d4/calculator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ly0d4/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ly0d4/busicode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ly0d4/busicode.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +155,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/ly/bean/src/ly0d4",
+    "last_opened_file_path": "C:/ly/bean",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -238,6 +236,7 @@
       <workItem from="1768383975365" duration="852000" />
       <workItem from="1768384904101" duration="1452000" />
       <workItem from="1768671169097" duration="3280000" />
+      <workItem from="1768727006480" duration="527000" />
     </task>
     <servers />
   </component>
