@@ -4217,8 +4217,8 @@ function days$1({
 
     if (method_code === "0"){ // 日结
         //结算时点
-        let checkin0 = new Date(checkin.toDateString()),
-            checkout0 = new Date(checkout.toDateString());
+        let checkin0 = new Date(checkin),
+            checkout0 = new Date(checkout);
 
         if (checkin0 === checkout0){ // 当日不考虑结算时点
             return 1;
